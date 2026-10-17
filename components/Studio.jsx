@@ -1,3 +1,4 @@
+import AddressHighlight from "./AddressHighlight";
 import Reveal from "./Reveal";
 import { EMAIL } from "@/lib/site";
 
@@ -22,15 +23,8 @@ export default function Studio() {
           <p>
             The studio specialises in all types of cutting and carving for people who already know the material they want. Wood, metal, stone, acrylic, and composite — brought to one bench.
           </p>
-          <address className="address">
-            Beside Neha Suiting &amp; Shirting, Opp. MRM Stone
-            <br />
-            Gaganpahad, Shamshabad Road
-            <br />
-            Hyderabad, Rangareddy, Telangana
-            <br />
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          </address>
+          <AddressHighlight />
+          <a className="studio-mail" href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </Reveal>
       </div>
     </section>

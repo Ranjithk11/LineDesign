@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useEnquiry } from "./EnquiryProvider";
 import { EMAIL, MAPS_URL, MATERIALS, PHONES, WHATSAPP_URL } from "@/lib/site";
+import AddressHighlight from "./AddressHighlight";
 
 export default function Contact() {
   const { material, setMaterial, detailsRef } = useEnquiry();
@@ -39,6 +40,7 @@ export default function Contact() {
             </li>
           ))}
         </ul>
+        <AddressHighlight />
         <div className="contact-meta">
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           <a href={WHATSAPP_URL}>WhatsApp the studio</a>
