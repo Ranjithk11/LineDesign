@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import SlideDeck from "./SlideDeck";
 import { STEPS } from "@/lib/site";
 
 export default function Process() {
@@ -7,7 +8,7 @@ export default function Process() {
       <div className="wrap">
         <p className="kicker light">How a job moves</p>
         <h2 id="process-title">From file to finished board.</h2>
-        <Reveal as="ol" className="steps">
+        <SlideDeck className="steps-deck" trackClassName="steps" trackAs="ol" label="How a job moves">
           {STEPS.map((step) => (
             <Reveal as="li" key={step.index} delay={step.delay}>
               <p className="idx">{step.index}</p>
@@ -15,7 +16,7 @@ export default function Process() {
               <p>{step.copy}</p>
             </Reveal>
           ))}
-        </Reveal>
+        </SlideDeck>
       </div>
     </section>
   );

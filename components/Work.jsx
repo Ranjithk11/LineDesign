@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import SlideDeck from "./SlideDeck";
 import { WORK } from "@/lib/site";
 
 export default function Work() {
@@ -27,7 +28,7 @@ export default function Work() {
         </figcaption>
       </figure>
       <div className="wrap" style={{ paddingBottom: 96 }}>
-        <div className="work-grid">
+        <SlideDeck className="work-deck" trackClassName="work-grid" label="Surfaces">
           {WORK.map((item) => (
             <Reveal as="figure" key={item.title} delay={item.delay}>
               <div className="frame">
@@ -39,7 +40,7 @@ export default function Work() {
               </figcaption>
             </Reveal>
           ))}
-        </div>
+        </SlideDeck>
       </div>
     </section>
   );
